@@ -7,19 +7,20 @@ import psutil
 
 
 root=tk.Tk()
-root.geometry('280x200')
+root.geometry('280x280')
 root.title("Acidity Calculator")
-custom_font = font.Font(size=10) 
+custom_font = font.Font(size=12) 
 
 def handle_button_click():
     imput_mlsample=float(mlsample.get())
+    input_dil=float(dil.get())
     input_mlNaOH=float(mlNaOH.get())
     mlNaoH=(input_mlNaOH/1000)*0.1
-    Lactic_result=round((((mlNaoH*90)*100)/imput_mlsample),3)
-    Acetic_result=round((((mlNaoH*60)*100)/imput_mlsample),3)
-    Citric_result=round((((mlNaoH*192.12/3)*100)/imput_mlsample),3)
-    HCl_result=round(((mlNaoH*36.4)*100/imput_mlsample),3)
-    oleic_result=round(((mlNaoH*282)*100/(imput_mlsample*0.91)),3)
+    Lactic_result=round((((mlNaoH*90)*100)/imput_mlsample)*input_dil,3)
+    Acetic_result=round((((mlNaoH*60)*100)/imput_mlsample)*input_dil,3)
+    Citric_result=round((((mlNaoH*192.12/3)*100)/imput_mlsample)*input_dil,3)
+    HCl_result=round(((mlNaoH*36.4)*100/imput_mlsample)*input_dil,3)
+    oleic_result=round(((mlNaoH*282)*100/(imput_mlsample*0.91))*input_dil,3)
     
 
     return  label3.config(text=f'Acidity={Lactic_result} % w/w Lactic acid''\n'
@@ -35,6 +36,11 @@ label1 = tk.Label(root, text="ml Δείγματος:")
 label1.pack()
 mlsample = tk.Entry(root)
 mlsample.pack()
+
+label4 = tk.Label(root, text="Αραίωση 1 προς:"'\n(Βάλε 1 αν δεν έχεις κάνει αραίωση)')
+label4.pack()
+dil = tk.Entry(root)
+dil.pack()
 
 label2 = tk.Label(root, text="ml NaOH O,1N:")
 label2.pack()
