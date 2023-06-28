@@ -1,16 +1,14 @@
 import tkinter as tk
 from tkinter import font
 import sys
-# import subprocess
 from tkinter import messagebox
-# import os
 import psutil
+
 
 root = tk.Tk()
 root.title("Salt Calculator")
 custom_font = font.Font(size=16) 
 # Adjust size
-
 root.geometry( "300x250" )
 
 def handle_button_click():
