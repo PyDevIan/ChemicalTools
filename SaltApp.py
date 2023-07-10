@@ -48,7 +48,7 @@ button.pack()
 label5=tk.Label(root,text="")
 label5.pack()
 
-footer_label = tk.Label(root, text="Developed by Ioannis Tsioukis")
+footer_label = tk.Label(root, text="Developed by PyDevIan")
 footer_label.pack(side=tk.BOTTOM, pady=10)
 
 
