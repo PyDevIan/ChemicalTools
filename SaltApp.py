@@ -4,7 +4,6 @@ import sys
 from tkinter import messagebox
 import psutil
 
-
 root = tk.Tk()
 root.title("Salt Calculator")
 custom_font = font.Font(size=16) 
@@ -48,6 +47,9 @@ button.pack()
 
 label5=tk.Label(root,text="")
 label5.pack()
+
+footer_label = tk.Label(root, text="Developed by Ioannis Tsioukis")
+footer_label.pack(side=tk.BOTTOM, pady=10)
 
 
 def main():

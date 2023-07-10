@@ -21,13 +21,14 @@ def handle_button_click():
     Citric_result=round((((mlNaoH*192.12/3)*100)/imput_mlsample)*input_dil,3)
     HCl_result=round(((mlNaoH*36.4)*100/imput_mlsample)*input_dil,3)
     oleic_result=round(((mlNaoH*282)*100/(imput_mlsample*0.91))*input_dil,3)
-    
+    ascorbic_result=round((((mlNaoH*176.124/2)*100)/imput_mlsample)*input_dil,3)
 
     return  label3.config(text=f'Acidity={Lactic_result} % w/w Lactic acid''\n'
                             f'Acidity={Acetic_result} % w/w Acetic acid''\n'
                             f'Acidity={Citric_result} % w/w Citric acid''\n'
                             f'Acidity={HCl_result} % w/w HCl acid''\n'
                             f'Acidity={oleic_result} % w/w Oleic acid''\n'
+                            f'Acidity={ascorbic_result} % w/w Ascorbic acid''\n'
                             ,font=custom_font,fg="blue"
     )
 
@@ -53,6 +54,8 @@ button.pack()
 label3=tk.Label(root,text="")
 label3.pack()
 
+footer_label = tk.Label(root, text="Developed by Ioannis Tsioukis")
+footer_label.pack(side=tk.BOTTOM, pady=10)
 
 def main():
  
