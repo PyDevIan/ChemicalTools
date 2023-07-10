@@ -123,7 +123,10 @@ drop.pack()
 # Create button, it will change label text
 button =tk.Button( root , text = "click Me" , command = show ).pack()
   
+footer_label = tk.Label(root, text="Developed by PyDevIan")
+footer_label.pack(side=tk.BOTTOM, pady=10)
 # Execute tkinter
+
 
 def main():
  
