@@ -72,7 +72,7 @@ input_entry2.pack()
 button = ttk.Button(window, text='Generate QR Code', command=generate_qr_code)
 button.pack()
 
-footer_label = tk.Label(window, text="Developed by Ioannis Tsioukis")
+footer_label = tk.Label(window, text="Developed by PyDevIan")
 footer_label.pack(side=tk.BOTTOM, pady=10)
 
 # Run the main event loop
